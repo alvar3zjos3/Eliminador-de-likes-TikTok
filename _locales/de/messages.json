@@ -1,0 +1,78 @@
+{
+  "appTitle": { "message": "TikTok Like Entferner" },
+  "step1": {
+    "message": "Melde dich bei TikTok an, passe die Einstellungen unten an und klicke auf Starten."
+  },
+  "step2": {
+    "message": "Schritt 2: Kehre hierher zurück und klicke auf die Schaltfläche unten, um zu beginnen."
+  },
+  "startButton": { "message": "Likes entfernen starten" },
+  "list1": { "message": "Die Erweiterung öffnet dein TikTok-Profil" },
+  "list2": { "message": "Gehe zum Tab „Gefällt mir“" },
+  "list3": { "message": "Öffne jedes beliebte Video" },
+  "list4": { "message": "Entferne den Like und gehe zum nächsten" },
+  "list5": { "message": "Wiederhole dies, bis alle Likes entfernt wurden" },
+  "note": {
+    "message": "Verwende Intervalle, um Limits zu vermeiden. Du kannst im Panel pausieren, fortsetzen und den Bericht herunterladen."
+  },
+  "tip": {
+    "message": "Aktualisiere dein TikTok-Profil nach dem Abschluss, um das Ergebnis zu bestätigen."
+  },
+  "linkReposts": { "message": "Alle Reposts entfernen" },
+  "linkFavorite": { "message": "Alle Favoriten entfernen" },
+  "linkGitHub": { "message": "GitHub" },
+  "notLoggedIn": { "message": "Melde dich zuerst bei TikTok an." },
+  "signInTiktok": { "message": "Bei TikTok anmelden" },
+  "configTitle": { "message": "Einstellungen" },
+  "useKeywords": {
+    "message": "Nach Stichwörtern filtern (leer oder deaktiviert = alle entfernen)"
+  },
+  "intervalMode": { "message": "Intervall (Sek)" },
+  "intervalRange": { "message": "Min. - Max." },
+  "intervalRangeBetween": { "message": "Zwischen Min. und Max. Sekunden" },
+  "intervalSet": { "message": "Feste Werte" },
+  "seconds": { "message": "s" },
+  "reportFormat": { "message": "Berichtsformat" },
+  "keywordsPlaceholder": { "message": "z. B. cat, memecoin" },
+  "intervalSetPlaceholder": { "message": "1, 3, 5" },
+  "pagePauseLabel": { "message": "Pause zwischen Seiten (s)" },
+  "panelTitle": { "message": "TikTok Likes Remover" },
+  "statusPreparing": { "message": "Wird vorbereitet..." },
+  "statusPaused": { "message": "Pausiert" },
+  "statusResuming": { "message": "Wird fortgesetzt..." },
+  "btnPause": { "message": "Pause" },
+  "btnResume": { "message": "Fortsetzen" },
+  "btnDownloadReport": { "message": "Bericht herunterladen" },
+  "statusWaiting": { "message": "Konto wird identifiziert..." },
+  "statusListing": { "message": "Likes werden geladen..." },
+  "statusPageRemoving": {
+    "message": "Seite $1$: $2$ von $3$ werden entfernt...",
+    "placeholders": {
+      "1": { "content": "$1" },
+      "2": { "content": "$2" },
+      "3": { "content": "$3" }
+    }
+  },
+  "statusDone": { "message": "Fertig! Alle Likes wurden verarbeitet." },
+  "statusNone": { "message": "Keine Likes gefunden." },
+  "statusErrorNoAccount": {
+    "message": "Konto konnte nicht erkannt werden. TikTok neu laden und erneut versuchen."
+  },
+  "statusErrorRedirectedForyou": {
+    "message": "Du wurdest zu 'Für dich' weitergeleitet, weil du nicht eingeloggt bist. Melde dich bei TikTok an, öffne die Erweiterung und klicke erneut auf Starten."
+  },
+  "statusErrorRemove": {
+    "message": "Fehler beim Entfernen von $1$.",
+    "placeholders": { "1": { "content": "$1" } }
+  },
+  "panelClose": { "message": "Schließen" },
+  "statsPages": { "message": "Seiten" },
+  "statsRemoved": { "message": "Entfernt" },
+  "statsListed": { "message": "Gelistet" },
+  "statsFailed": { "message": "Fehlgeschlagen" },
+  "statusStoppedFailures": {
+    "message": "Gestoppt: $1$ aufeinanderfolgende Fehler. Bericht herunterladen, um fehlgeschlagene anzuzeigen.",
+    "placeholders": { "1": { "content": "$1" } }
+  },
+  "statusBetweenPages": { "message": "Pause vor der nächsten Seite..." }
+}

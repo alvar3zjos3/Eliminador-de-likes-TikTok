@@ -1,0 +1,59 @@
+{
+  "name": "Eliminador de likes TikTok",
+  "description": "Elimina automáticamente los videos marcados con like en TikTok con un panel de control en la página y un informe descargable.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Jose",
+    "url": "https://github.com/alvar3zjos3"
+  },
+  "homepage_url": "https://github.com/alvar3zjos3/Tiktok-Borrar-Like",
+  "permissions": [
+    "scripting",
+    "tabs",
+    "cookies",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.tiktok.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.tiktok.com/*"
+      ],
+      "js": [
+        "script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Eliminador de likes TikTok",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "script.js"
+      ],
+      "matches": [
+        "https://*.tiktok.com/*"
+      ]
+    }
+  ],
+  "manifest_version": 3,
+  "default_locale": "es",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "appTitle": { "message": "Removedor de curtidas do TikTok" },
+  "step1": {
+    "message": "Faça login no TikTok, configure as opções abaixo e clique em Iniciar."
+  },
+  "step2": {
+    "message": "Passo 2: Volte aqui e clique no botão abaixo para iniciar o processo."
+  },
+  "startButton": { "message": "Iniciar Remoção de Curtidas" },
+  "list1": { "message": "A extensão abrirá seu perfil do TikTok" },
+  "list2": { "message": "Entrará na aba de \"Curtidos\"" },
+  "list3": { "message": "Abrirá cada vídeo curtido" },
+  "list4": { "message": "Removerá a curtida e passará para o próximo" },
+  "list5": { "message": "Repetirá até que todas as curtidas sejam removidas" },
+  "note": {
+    "message": "Use intervalos para evitar limites. Você pode pausar, continuar e baixar o relatório pelo painel dentro da página."
+  },
+  "tip": {
+    "message": "Atualize seu perfil do TikTok ao terminar para confirmar o resultado."
+  },
+  "linkReposts": { "message": "Remover Todos os Reposts" },
+  "linkFavorite": { "message": "Remover Todos os Favoritos" },
+  "linkGitHub": { "message": "GitHub" },
+  "notLoggedIn": { "message": "Faça login no TikTok primeiro." },
+  "signInTiktok": { "message": "Fazer login no TikTok" },
+  "configTitle": { "message": "Configurações" },
+  "useKeywords": {
+    "message": "Filtrar por palavras-chave; desmarque para remover todos"
+  },
+  "intervalMode": { "message": "Intervalo (seg)" },
+  "intervalRange": { "message": "Mín. - Máx." },
+  "intervalRangeBetween": { "message": "Entre o mínimo e o máximo de segundos" },
+  "intervalSet": { "message": "Valores fixos" },
+  "seconds": { "message": "s" },
+  "reportFormat": { "message": "Formato do relatório" },
+  "keywordsPlaceholder": { "message": "ex: cat, memecoin" },
+  "intervalSetPlaceholder": { "message": "1, 3, 5" },
+  "pagePauseLabel": { "message": "Pausa entre páginas (s)" },
+  "panelTitle": { "message": "TikTok Likes Remover" },
+  "statusPreparing": { "message": "Preparando..." },
+  "statusPaused": { "message": "Pausado" },
+  "statusResuming": { "message": "Continuando..." },
+  "btnPause": { "message": "Pausar" },
+  "btnResume": { "message": "Continuar" },
+  "btnDownloadReport": { "message": "Baixar relatório" },
+  "statusWaiting": { "message": "Identificando sua conta..." },
+  "statusListing": { "message": "Listando curtidas..." },
+  "statusPageRemoving": {
+    "message": "Página $1$: removendo $2$ de $3$ itens...",
+    "placeholders": {
+      "1": { "content": "$1" },
+      "2": { "content": "$2" },
+      "3": { "content": "$3" }
+    }
+  },
+  "statusDone": { "message": "Concluído! Todas as curtidas foram processadas." },
+  "statusNone": { "message": "Nenhuma curtida encontrada." },
+  "statusErrorNoAccount": {
+    "message": "Não foi possível identificar sua conta. Recarregue o TikTok e tente de novo."
+  },
+  "statusErrorRedirectedForyou": {
+    "message": "Você foi redirecionado ao 'Para você' porque não está logado. Faça login, abra a extensão e clique em Iniciar de novo."
+  },
+  "statusErrorRemove": {
+    "message": "Erro ao remover $1$.",
+    "placeholders": { "1": { "content": "$1" } }
+  },
+  "panelClose": { "message": "Fechar" },
+  "statsPages": { "message": "Páginas" },
+  "statsRemoved": { "message": "Removidos" },
+  "statsListed": { "message": "Listados" },
+  "statsFailed": { "message": "Falhas" },
+  "statusStoppedFailures": {
+    "message": "Parado: $1$ falhas seguidas. Baixe o relatório para ver quais falharam.",
+    "placeholders": { "1": { "content": "$1" } }
+  },
+  "statusBetweenPages": { "message": "Pausa antes da próxima página..." }
+}

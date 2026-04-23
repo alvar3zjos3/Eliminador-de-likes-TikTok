@@ -1,0 +1,78 @@
+{
+  "appTitle": { "message": "Supprimeur de likes TikTok" },
+  "step1": {
+    "message": "Connectez-vous à TikTok, configurez les options ci-dessous et cliquez sur Commencer."
+  },
+  "step2": {
+    "message": "Étape 2 : Revenez ici et cliquez sur le bouton ci-dessous pour commencer."
+  },
+  "startButton": { "message": "Commencer la suppression des likes" },
+  "list1": { "message": "L'extension ouvrira votre profil TikTok" },
+  "list2": { "message": "Accéder à l'onglet \"J'aime\"" },
+  "list3": { "message": "Ouvrir chaque vidéo aimée" },
+  "list4": { "message": "Retirer le like et passer à la suivante" },
+  "list5": { "message": "Répéter jusqu'à suppression de tous les likes" },
+  "note": {
+    "message": "Utilisez des intervalles pour éviter les limites. Vous pouvez mettre en pause, reprendre et télécharger le rapport depuis le panneau de la page."
+  },
+  "tip": {
+    "message": "Actualisez votre profil TikTok une fois terminé pour confirmer le résultat."
+  },
+  "linkReposts": { "message": "Supprimer les reposts" },
+  "linkFavorite": { "message": "Supprimer les favoris" },
+  "linkGitHub": { "message": "GitHub" },
+  "notLoggedIn": { "message": "Connectez-vous d'abord à TikTok." },
+  "signInTiktok": { "message": "Se connecter à TikTok" },
+  "configTitle": { "message": "Paramètres" },
+  "useKeywords": {
+    "message": "Filtrer par mots-clés ; décochez pour tout supprimer"
+  },
+  "intervalMode": { "message": "Intervalle (sec)" },
+  "intervalRange": { "message": "Min. - Max." },
+  "intervalRangeBetween": { "message": "Entre les secondes min et max" },
+  "intervalSet": { "message": "Valeurs fixes" },
+  "seconds": { "message": "s" },
+  "reportFormat": { "message": "Format du rapport" },
+  "keywordsPlaceholder": { "message": "ex. : cat, memecoin" },
+  "intervalSetPlaceholder": { "message": "1, 3, 5" },
+  "pagePauseLabel": { "message": "Pause entre les pages (s)" },
+  "panelTitle": { "message": "TikTok Likes Remover" },
+  "statusPreparing": { "message": "Préparation..." },
+  "statusPaused": { "message": "En pause" },
+  "statusResuming": { "message": "Reprise..." },
+  "btnPause": { "message": "Pause" },
+  "btnResume": { "message": "Reprendre" },
+  "btnDownloadReport": { "message": "Télécharger le rapport" },
+  "statusWaiting": { "message": "Identification de votre compte..." },
+  "statusListing": { "message": "Chargement des likes..." },
+  "statusPageRemoving": {
+    "message": "Page $1$ : suppression de $2$ sur $3$...",
+    "placeholders": {
+      "1": { "content": "$1" },
+      "2": { "content": "$2" },
+      "3": { "content": "$3" }
+    }
+  },
+  "statusDone": { "message": "Terminé ! Tous les likes ont été traités." },
+  "statusNone": { "message": "Aucun like trouvé." },
+  "statusErrorNoAccount": {
+    "message": "Impossible d'identifier votre compte. Rechargez TikTok et réessayez."
+  },
+  "statusErrorRedirectedForyou": {
+    "message": "Vous avez été redirigé vers \"Pour toi\" car vous n'êtes pas connecté. Connectez-vous, rouvrez l'extension et cliquez sur Commencer."
+  },
+  "statusErrorRemove": {
+    "message": "Erreur lors de la suppression de $1$.",
+    "placeholders": { "1": { "content": "$1" } }
+  },
+  "panelClose": { "message": "Fermer" },
+  "statsPages": { "message": "Pages" },
+  "statsRemoved": { "message": "Supprimés" },
+  "statsListed": { "message": "Listés" },
+  "statsFailed": { "message": "Échecs" },
+  "statusStoppedFailures": {
+    "message": "Arrêté : $1$ échecs consécutifs. Téléchargez le rapport pour voir les échecs.",
+    "placeholders": { "1": { "content": "$1" } }
+  },
+  "statusBetweenPages": { "message": "Pause avant la page suivante..." }
+}
