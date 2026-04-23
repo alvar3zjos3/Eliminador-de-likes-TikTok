@@ -29,17 +29,23 @@ function setupPageRemoveListener() {
     var ctx, csrfToken, userAgent, odinId;
     try {
       ctx = window.__$UNIVERSAL_DATA$__ && window.__$UNIVERSAL_DATA$__.__DEFAULT_SCOPE__ && window.__$UNIVERSAL_DATA$__.__DEFAULT_SCOPE__["webapp.app-context"];
-      if (!ctx) throw new Error("sin contexto");
-      csrfToken = ctx.csrfToken;
-      userAgent = ctx.userAgent || (typeof navigator !== "undefined" ? navigator.userAgent : "");
-      odinId = ctx.odinId || "";
+      userAgent = (ctx && ctx.userAgent) || (typeof navigator !== "undefined" ? navigator.userAgent : "");
+      odinId = (ctx && ctx.odinId) || "";
+      // 1. Intentar token del contexto global
+      csrfToken = ctx && ctx.csrfToken;
+      // 2. Fallback a cookies (tt_csrf_token / tt-csrf-token)
+      if (!csrfToken) {
+        var cookieStr = (typeof document !== "undefined" && document.cookie) || "";
+        var cookieMatch = cookieStr.match(/(?:^|;\s*)tt[_-]csrf[_-]token=([^;]+)/i);
+        if (cookieMatch) csrfToken = decodeURIComponent(cookieMatch[1]);
+      }
     } catch (err) {
       window.dispatchEvent(new CustomEvent("tlr-remove-like-result", { detail: { awemeId: awemeId, success: false, error: String(err && err.message) } }));
       return;
     }
 
     if (!csrfToken) {
-      window.dispatchEvent(new CustomEvent("tlr-remove-like-result", { detail: { awemeId: awemeId, success: false, error: "csrfToken no encontrado" } }));
+      window.dispatchEvent(new CustomEvent("tlr-remove-like-result", { detail: { awemeId: awemeId, success: false, error: "csrfToken no encontrado (ni en contexto ni en cookies)" } }));
       return;
     }
 

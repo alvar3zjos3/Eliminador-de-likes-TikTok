@@ -60,6 +60,22 @@
     return "";
   }
 
+  /** Obtiene el CSRF token más fresco posible:
+   *  1. Intenta leerlo del objeto global de TikTok (más fiable si está disponible)
+   *  2. Fallback a la cookie tt_csrf_token
+   *  3. Fallback a la cookie s_v_web_id (algunos flujos lo aceptan)
+   */
+  function getFreshCsrfToken() {
+    try {
+      const ctx =
+        window.__$UNIVERSAL_DATA$__ &&
+        window.__$UNIVERSAL_DATA$__.__DEFAULT_SCOPE__ &&
+        window.__$UNIVERSAL_DATA$__.__DEFAULT_SCOPE__["webapp.app-context"];
+      if (ctx && ctx.csrfToken) return ctx.csrfToken;
+    } catch (e) {}
+    return getCookie("tt_csrf_token") || getCookie("tt-csrf-token") || "";
+  }
+
   /** Pide al background inyectar el listener de eliminación en el contexto de la página (vía executeScript MAIN),
    * evitando el CSP que bloquea los scripts en línea. */
   var pageRemoveScriptInjected = false;
@@ -161,6 +177,9 @@
     let lastErr;
     for (let attempt = 1; attempt <= retries; attempt++) {
       try {
+        // Refrescar el CSRF en cada intento para evitar tokens caducados
+        const currentCsrf = getFreshCsrfToken() || context.csrfToken;
+        if (!currentCsrf) throw new Error("csrfToken no encontrado en intento " + attempt);
         const res = await fetch(url, {
           method: "POST",
           headers: {
@@ -169,7 +188,7 @@
             "content-type": "application/x-www-form-urlencoded",
             origin: "https://www.tiktok.com",
             referer: refererUrl,
-            "tt-csrf-token": context.csrfToken,
+            "tt-csrf-token": currentCsrf,
           },
           credentials: "same-origin",
           body: "",
